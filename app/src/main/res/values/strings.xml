@@ -4,4 +4,9 @@
     <string name="hint_input_palindrome">Palindrome</string>
     <string name="text_button_check">CHECK</string>
     <string name="text_button_next">NEXT</string>
+    <string name="title_second_screen">Second Screen</string>
+    <string name="error_empty_text">Please enter a text</string>
+    <string name="is_palindrome">IsPalindrome!</string>
+    <string name="not_palindrome">Not Palindrome!</string>
+    <string name="error_cropping_failed">Cropping Failed</string>
 </resources>

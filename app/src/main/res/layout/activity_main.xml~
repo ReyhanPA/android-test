@@ -8,7 +8,7 @@
     android:background="@drawable/image_background"
     tools:context=".ui.main.MainActivity">
 
-    <ImageView
+    <ImageButton
         android:id="@+id/imgUser"
         android:layout_width="116dp"
         android:layout_height="116dp"
