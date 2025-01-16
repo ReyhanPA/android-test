@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Android Test</string>
+    <string name="hint_input_name">Name</string>
+    <string name="hint_input_palindrome">Palindrome</string>
+    <string name="text_button_check">CHECK</string>
+    <string name="text_button_next">NEXT</string>
 </resources>
