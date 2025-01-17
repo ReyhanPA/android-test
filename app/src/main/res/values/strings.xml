@@ -9,4 +9,15 @@
     <string name="is_palindrome">IsPalindrome!</string>
     <string name="not_palindrome">Not Palindrome!</string>
     <string name="error_cropping_failed">Cropping Failed</string>
+    <string name="subtitle_second_string">Welcome</string>
+    <string name="default_username">Selected User Name</string>
+    <string name="default_name">John Doe</string>
+    <string name="text_button_choose_user">Choose a User</string>
+    <string name="desc_image_user">Image User</string>
+    <string name="desc_image_user_icon">Image User Icon</string>
+    <string name="desc_toolbar_back_to_first_screen">Back to First Screen</string>
+    <string name="desc_toolbar_second_screen">Toolbar Second Screen</string>
+    <string name="desc_toolbar_third_screen">Toolbar Third Screen</string>
+    <string name="desc_toolbar_back_to_second_screen">Back to Second String</string>
+    <string name="title_third_screen">Third Screen</string>
 </resources>

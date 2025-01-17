@@ -102,9 +102,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun next(name: String) {
+    private fun next(sentence: String) {
         val intent = Intent(this@MainActivity, WelcomeActivity::class.java)
-        intent.putExtra("EXTRA_NAME", name)
+        intent.putExtra("EXTRA_NAME", )
         startActivity(intent)
     }
 
