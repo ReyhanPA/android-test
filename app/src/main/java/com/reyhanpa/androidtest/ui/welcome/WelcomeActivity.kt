@@ -5,7 +5,6 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.reyhanpa.androidtest.databinding.ActivityWelcomeBinding
-import com.reyhanpa.androidtest.ui.main.MainActivity
 import com.reyhanpa.androidtest.ui.users.UsersActivity
 import com.reyhanpa.androidtest.utils.ViewModelFactory
 
@@ -32,10 +31,7 @@ class WelcomeActivity : AppCompatActivity() {
 
     private fun setupListeners() {
         binding.apply {
-            toolbarBack.setOnClickListener {
-                val intent = Intent(this@WelcomeActivity, MainActivity::class.java)
-                startActivity(intent)
-            }
+            toolbarBack.setOnClickListener { finish() }
             username.text = intent.getStringExtra("EXTRA_USERNAME")
             btnChooseUser.setOnClickListener {
                 val intent = Intent(this@WelcomeActivity, UsersActivity::class.java)

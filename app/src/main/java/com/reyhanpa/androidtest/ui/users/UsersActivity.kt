@@ -1,6 +1,5 @@
 package com.reyhanpa.androidtest.ui.users
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -8,7 +7,6 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.reyhanpa.androidtest.databinding.ActivityUsersBinding
-import com.reyhanpa.androidtest.ui.welcome.WelcomeActivity
 import com.reyhanpa.androidtest.utils.ViewModelFactory
 
 class UsersActivity : AppCompatActivity() {
@@ -58,10 +56,7 @@ class UsersActivity : AppCompatActivity() {
     }
 
     private fun setupActions() {
-        binding.toolbarBack.setOnClickListener {
-            val intent = Intent(this@UsersActivity, WelcomeActivity::class.java)
-            startActivity(intent)
-        }
+        binding.toolbarBack.setOnClickListener { finish() }
     }
 
     private fun showError(message: String) {
