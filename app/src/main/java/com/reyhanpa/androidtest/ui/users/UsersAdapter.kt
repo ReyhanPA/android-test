@@ -34,6 +34,7 @@ class UsersAdapter : PagingDataAdapter<DataItem, UsersAdapter.UsersViewHolder>(D
             binding.tvEmail.text = user.email
             itemView.setOnClickListener {
                 val intent = Intent(binding.root.context, WelcomeActivity::class.java)
+                intent.putExtra("EXTRA_USERNAME", username)
                 binding.root.context.startActivity(intent)
             }
         }
