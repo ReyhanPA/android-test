@@ -1,0 +1,4 @@
+package com.reyhanpa.androidtest.ui.users
+
+class LoadingStateAdapter {
+}

@@ -22,5 +22,4 @@
     <string name="title_third_screen">Third Screen</string>
     <string name="username">Firstname Lastname</string>
     <string name="email">EMAIL@EMAIL.COM</string>
-    <string name="retry">Retry</string>
 </resources>

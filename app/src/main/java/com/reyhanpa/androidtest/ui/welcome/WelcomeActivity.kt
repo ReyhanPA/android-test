@@ -17,6 +17,7 @@ class WelcomeActivity : AppCompatActivity() {
         binding.apply {
             toolbarBack.setOnClickListener { finish() }
             name.text = intent.getStringExtra("EXTRA_NAME")
+            username.text = intent.getStringExtra("EXTRA_USERNAME")
             btnChooseUser.setOnClickListener {
                 val intent = Intent(this@WelcomeActivity, UsersActivity::class.java)
                 startActivity(intent)
