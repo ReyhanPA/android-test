@@ -20,6 +20,6 @@ cd android-test
 ## Installation (Other Way)
 
 1. Download file APK
-[Android Test APK](https://drive.google.com/)
+[Android Test APK](https://drive.google.com/file/d/15dzlOyt3dCfdKkRnvoybbh0cYZ9U4-Ax/view?usp=sharing)
 
 1. Install that file in your mobile phone and enjoy!
