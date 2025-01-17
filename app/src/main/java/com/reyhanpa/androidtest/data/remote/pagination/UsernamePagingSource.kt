@@ -10,11 +10,11 @@ class UsernamePagingSource(private val apiService: ApiService) : PagingSource<In
         return try {
             val position = params.key ?: INITIAL_PAGE_INDEX
             val responseData = apiService.getUsername(position, params.loadSize)
-            val filteredData = responseData.data?.filterNotNull() ?: emptyList()
+            val filteredData = responseData.data ?: emptyList()
             LoadResult.Page(
                 data = filteredData,
                 prevKey = if (position == INITIAL_PAGE_INDEX) null else position - 1,
-                nextKey = if (responseData.data?.isEmpty() == true) null else position + 1
+                nextKey = if (responseData.data.isEmpty()) null else position + 1
             )
         } catch (exception: Exception) {
             return LoadResult.Error(exception)

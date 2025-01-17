@@ -8,11 +8,14 @@ import android.view.View
 import android.widget.Toast
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.reyhanpa.androidtest.R
+import com.reyhanpa.androidtest.data.pref.UserModel
 import com.reyhanpa.androidtest.databinding.ActivityMainBinding
 import com.reyhanpa.androidtest.ui.welcome.WelcomeActivity
+import com.reyhanpa.androidtest.utils.ViewModelFactory
 import com.yalantis.ucrop.UCrop
 import java.io.File
 import java.util.Locale
@@ -20,6 +23,9 @@ import java.util.Locale
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private var currentImageUri: Uri? = null
+    private val viewModel by viewModels<MainViewModel> {
+        ViewModelFactory.getInstance(this)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,7 +46,8 @@ class MainActivity : AppCompatActivity() {
                 val nameText = binding.etName.text.toString()
                 val palindromeText = binding.etPalindrome.text.toString()
                 if (nameText.isNotEmpty() && palindromeText.isNotEmpty()) {
-                    next(nameText)
+                    viewModel.saveSession(UserModel(nameText, resources.getString(R.string.default_username)))
+                    next()
                 } else {
                     binding.etNameLayout.error = getString(R.string.error_empty_text)
                     binding.etPalindromeLayout.error = getString(R.string.error_empty_text)
@@ -102,9 +109,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun next(name: String) {
+    private fun next() {
         val intent = Intent(this@MainActivity, WelcomeActivity::class.java)
-        intent.putExtra("EXTRA_NAME", name)
         startActivity(intent)
     }
 

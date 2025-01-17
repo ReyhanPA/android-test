@@ -12,7 +12,6 @@ import com.reyhanpa.androidtest.ui.welcome.WelcomeActivity
 import com.reyhanpa.androidtest.utils.DiffUtilCallback
 
 class UsersAdapter : PagingDataAdapter<DataItem, UsersAdapter.UsersViewHolder>(DiffUtilCallback) {
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UsersViewHolder {
         val binding = ItemUsernameBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return UsersViewHolder(binding)
@@ -35,7 +34,6 @@ class UsersAdapter : PagingDataAdapter<DataItem, UsersAdapter.UsersViewHolder>(D
             binding.tvEmail.text = user.email
             itemView.setOnClickListener {
                 val intent = Intent(binding.root.context, WelcomeActivity::class.java)
-                intent.putExtra("EXTRA_USERNAME", username)
                 binding.root.context.startActivity(intent)
             }
         }
